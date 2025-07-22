@@ -1,0 +1,233 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(../img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%; 
+    background-attachment: fixed;
+    
+}
+
+/*Contenedor General*/
+.container{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 15px auto;
+    width:95%;
+}
+/*Parte del logo y del menú*/
+header{
+    /* hace que todos los elemnetos estén alineados al centro */
+    align-items: center;
+    /* Es una propiedad de flexbox que lo que hace es que los elementos html que yo tengo los hace mas flexibles */
+/* Todos los elementos los hace mas flexifles para cuando se haga responsive,que se muevan todos juntos, que sea mas manejable... */
+    display: flex;
+    /* justifica el contenido con espacioi entre ellas */
+    justify-content: space-between;
+}
+
+header .logo{
+    color: white;
+    font-size: 1.5em;
+    text-decoration: none;
+    /* que todas las letras se pongan en mayúsculas */
+    text-transform: uppercase;
+    background: rgb(127, 27, 27);
+    border-radius: 5px;
+    padding: 10px 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* Grosor de las letras */
+    font-weight: 600;
+}
+
+header .logo:hover{
+    color: rgb(127, 27, 27);
+    background-color: rgba(240, 248, 255, 0.777);
+    transition: 1s;
+}
+.menu_item{
+    padding:0.5em;
+    display:none;
+
+    text-decoration: none;
+    color: rgb(185, 132, 35);
+    font-weight: 600;
+    padding: 20px;
+    transition: 0.3s;
+    /* tamaño de la letra (em)*/
+    font-size: 1.3em;
+    text-transform: uppercase;
+}
+
+.menu_item:hover{
+    border-bottom: 5px solid blanchedalmond;
+    /* para que se subraye */
+    padding: 10px;
+}
+
+
+
+/* Proyectos */
+
+#PTexto{
+    color: #9B1F53;
+    /* 50px arriba y abajo y 0px a los lados */
+    margin: 50px 0px;
+    /* para que se mueva todo en forma de bloque */
+    display: block;
+    text-align: center;
+    font-size: 80px;
+    /* 0 0 20px es como va a ir el sombreado */
+    text-shadow: 0 0 20px rgb(255, 255, 255);
+}
+
+.fotos{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.hidden{
+    display: block;
+}
+
+.Pcontainer:after{
+    /* para qu antes del contenedor que haga algo, para que el contenedor muestre elementos aunque estos sean flotantes */
+    content: "";
+    display: block;
+    height: 0px;
+    clear: both;
+    
+}
+
+.Pcontainer{
+    width: 90%;
+    margin: 0 9%;
+    
+}
+
+/* Estructura de cada componente de la galeria (imagen + descripcion) */
+
+.Pcontainer div{
+    width: 27%;
+    height: auto;
+    display: inline;
+    float: left;
+    margin: 0% 3% 0% 0%;
+    padding: 0px;   
+}
+
+.Pcontainer div a{
+    text-decoration: none;
+}
+
+.Pcontainer div img{
+    width: 100%;
+    height: auto;
+    box-shadow: 0 0 10px rgb(255, 202, 104);
+    border: 1px solid palevioletred;
+}
+
+/* Estructura de la descripcion por defecto, que no se muestra*/
+
+.Pcontainer div img~span{
+    width: 100%;
+    display: block;
+    opacity: 0;
+    margin: 0;
+    padding: 2px 5px;
+    color: aliceblue;
+    background-color: #9b1f53c9;
+    box-shadow: 0 0 10px rgb(255, 202, 104);
+    text-align: center;
+    
+}
+
+/* Se muestra el texto(descripcion) al poner el cursor encima de la imagen */
+.Pcontainer div img:hover+span{
+    opacity: 1;
+}
+
+/* Se especifica el comportamiento que tendrán las imagenes al posicionar el cursor encima del contenedor */
+.Pcontainer:hover div{
+    opacity: 0.2;
+    transform: scale(0.7);
+    transition: 2s;
+}
+
+/* Se especifica el comportamiento que tendra la imagen seleccionada */
+.Pcontainer:hover div:hover{
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+
+/* copy right */
+
+.copyright{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 50%;
+    bottom: 0px;
+    left: 25%;
+    /* margin-bottom: 20px; */
+    padding: 0 100px 30px;
+}
+
+.copyright p{
+    color: white;
+    text-align: center;
+    margin-left: 3%;
+}
+
+/* redes sociales */
+
+
+
+.redesSociales{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px 10px;
+    list-style: none;
+}
+
+.redesSociales li a img{
+    width: 70px;
+    height: 70px;
+}
+
+.redesSociales li img{
+    padding: 12px;
+    margin: 10px;
+}
+
+.redesSociales li:hover{
+    background-color: rgba(255, 190, 121, 0.704);
+    border-radius: 10px;
+}
+
+
+/*Ajustes para hacer que la web sea Responsive*/
+@media  screen and (min-width:576px) {
+    nav{
+        display:flex;
+    }
+    .menu_item{
+        display:inline-block;
+    }
+    .icon{
+        display:none;
+}
+
+
+}

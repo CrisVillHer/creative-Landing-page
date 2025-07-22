@@ -1,0 +1,185 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* border-color: black;
+    border: 5px solid;    */
+}
+
+body{
+    background-image: url(../img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%; 
+    background-attachment: fixed;
+    
+}
+
+
+/*Contenedor General*/
+.container{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 15px auto;
+    width:95%;
+}
+/*Parte del logo y del menú*/
+header{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .logo{
+    color: white;
+    font-size: 1.5em;
+    text-decoration: none;
+    /* que todas las letras se pongan en mayúsculas */
+    text-transform: uppercase;
+    background: rgb(127, 27, 27);
+    border-radius: 5px;
+    padding: 10px 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* Grosor de las letras */
+    font-weight: 600;
+}
+
+header .logo:hover{
+    color: rgb(127, 27, 27);
+    background-color: rgba(240, 248, 255, 0.777);
+    transition: 1s;
+}
+.menu_item{
+    padding:0.5em;
+    display:none;
+
+    text-decoration: none;
+    color: rgb(185, 132, 35);
+    font-weight: 600;
+    padding: 20px;
+    transition: 0.3s;
+    /* tamaño de la letra */
+    font-size: 1.3em;
+    text-transform: uppercase;
+}
+
+.menu_item:hover{
+    border-bottom: 5px solid blanchedalmond;
+    /* para que se subraye */
+    padding: 10px;
+}
+
+.copyright{
+    position: absolute;
+    bottom: 0px;
+    left: 30%;
+    /* margin-bottom: 20px; */
+    padding: 0 100px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright p{
+    color: white;
+    text-align: center;
+    margin-left: 100px;
+}
+
+/* redes sociales */
+
+.redesSociales{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px 10px;
+    list-style: none;
+}
+
+.redesSociales li a img{
+    width: 70px;
+    height: 70px;
+}
+
+.redesSociales li img{
+    padding: 12px;
+    margin: 10px;
+}
+
+.redesSociales li:hover{
+    background-color: rgba(255, 190, 121, 0.704);
+    border-radius: 10px;
+}
+
+.cajaQ{
+    position: relative;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* espacio derecho y izquierdo de las cjas */
+    padding-right: 4%;
+    
+}
+
+
+h1{
+    text-align: center;
+    font-size: 3em;
+    color: rgb(195, 85, 38);
+}
+
+.cajaTexto{
+    position: relative;
+    background-color: rgba(240, 248, 255, 0.851);
+    width: 100%;
+    height: 40%;
+    margin-left: 50%;
+    margin-top: 5%;
+    padding-top: 2%;
+    border-radius: 5px;
+}
+
+
+.cajaTexto p{
+    font-size: 1.2em;
+    text-align: justify;
+    padding: 2%;
+    border-radius: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.fotoMia{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1%;
+    margin-top: 5%;
+}
+
+.fotoMia img{
+    width: 35%;
+    height: 40%;
+    padding: 2%;
+    background-color: rgba(222, 43, 73, 0.448);
+    border-radius: 10px;
+}
+
+/*Ajustes para hacer que la web sea Responsive*/
+@media  screen and (min-width:576px) {
+    nav{
+        display:flex;
+    }
+    .menu_item{
+        display:inline-block;
+    }
+    .icon{
+        display:none;
+}
+
+
+}
