@@ -15,4 +15,4 @@ Soy estudiante de DAW, apasionada por la tecnología y el desarrollo web. Esta p
 
 ## 📸 Capturas
 
-![Captura de pantalla](img/captura.png)
+![Captura de pantalla](img/Captura.png)
